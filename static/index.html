@@ -8,6 +8,9 @@
     For now, I can't do anything about it. Maybe I'll work on it more later.  <br>
 
     but fill out this form anyway <pre> :) </pre>
+
+    <h2> <a href="/prior.html">See previous reports</a> </h2>
+
     <br>
     <form action="/printer" method="post">
         Which printer <br>
@@ -25,11 +28,12 @@
 
         Who says? <br>
 
-        <input type="radio" id="me" name="who" value="me" required>
-        <label for="me">I say!</label><br>
-
         <input type="radio" id="print" name="who" value="the printer" required>
-        <label for="print">The printer says!</label><br>
+        <label for="print">The printer says! I see an error!</label><br>
+
+
+        <input type="radio" id="me" name="who" value="me" required>
+        <label for="me">I say! But I see no errors on the screen</label><br>
 
         <input type="radio" id="comp" name="who" value="my computer" required>
         <label for="comp">My computer told me</label><br>
@@ -59,7 +63,7 @@
         <label for="more">Please specify more!:</label><br>
         <input type="text" name="more" id="moreinfo"><br><br>
 
-        Optionally,<br>
+        <h3> Optionally, </h3>  
 
         <label for="name">What's your name?:</label><br>
 
@@ -69,14 +73,12 @@
         <input type="text" name="mail" id="emailpls"><br><br>
 
         <label for="complaints">Did this cause you distress? Complain your heart out! Nobody's reading it anyway</label><br>
-        <input type="textarea" name="complaints" id="complaints">
-        
+        <br> Actually, all of this is publically accessable. Don't write anything horrible</br>
+        <textarea name="complaints" id="complaints"></textarea>
+        <br>
 
         <input type="submit">
         <br>
-    
-        Note: All of this info is publicly accessable. Don't do anyting too bad please. 
-
 
     </form>
     <p>
@@ -84,6 +86,9 @@
         Send an email to <a href="mailto:me@jessie.id"> me@jessie.id</a>
     </p>
 
+    <h2> Note:</h2>
+    I made this because I was sick of the printers not working. I have no capability to fix the printer. 
+    Sometimes, we just need a place to complain. 
+    <br>
 
-    <a href="/prior.html">See previous reports</a>
 </body>

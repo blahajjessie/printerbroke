@@ -86,7 +86,7 @@ app.post("/printer", (req, res) => {
     let err= new Problem(report)
     issues.unshift(err);
     console.log(issues);
-    res.send("Thank you! See <a href=prior.html>prior response</a> or <a href=/>Submit another issue</a>");
+    res.send("Thank you! See <a href=prior.html>prior responses</a> or <a href=/>Submit another issue</a>");
     
 });
 

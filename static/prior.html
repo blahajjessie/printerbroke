@@ -10,7 +10,7 @@
     </p>
     <button onclick = "fetch('/issues')
     .then((response) => response.json())
-    .then((json) => {console.log(json); document.getElementById('issues').innerText= JSON.stringify(json); document.getElementById('formatted'); json.forEach(element => { 
+    .then((json) => {console.log(json); document.getElementById('issues').innerText= JSON.stringify(json); document.getElementById('formatted').innerHTML=''; json.forEach(element => { 
         document.getElementById('formatted').innerText += JSON.stringify(element, null, ' ');
     });});">
 
