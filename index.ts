@@ -10,6 +10,7 @@ type formobject={
     more: string
     name?: string
     mail?: string
+    complaints?:string
 }
 class Problem {
     which: string
@@ -23,6 +24,7 @@ class Problem {
     submittedStamp:number;
     resolvedStamp?:number;
     id :number;
+    complaints?: string;
     constructor(data:formobject){
         this.which = data.which
         this.who = data.who
@@ -30,6 +32,8 @@ class Problem {
         this.more = data.more
         this.mail = data.mail
         this.name = data.name
+        this.complaints = data.complaints
+
 
         this.resolved = false;
         this.submittedStamp = Date.now()
