@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>HELP!! THE PRINTER BROKE!!!</title>
+</head>
+<body>
+    <h1> The printer is broken, huh?</h1>
+
+    For now, I can't do anything about it. Maybe I'll work on it more later.  <br>
+
+    but fill out this form anyway <pre> :) </pre>
+    <br>
+    <form action="/printer" method="post">
+        Which printer <br>
+
+        <input type="radio" id="423L" name="which" value="423 Left" required>
+        <label for="423L">Room 423 Left printer</label><br>
+
+        <input type="radio" id="423R" name="which" value="423 Right" required>
+        <label for="423R">Room 423 Right printer</label><br>
+
+        <input type="radio" id="403" name="which" value="403" required>
+        <label for="403">Room 403</label><br>
+
+        <br>
+
+        Who says? <br>
+
+        <input type="radio" id="me" name="who" value="me" required>
+        <label for="me">I say!</label><br>
+
+        <input type="radio" id="print" name="who" value="the printer" required>
+        <label for="print">The printer says!</label><br>
+
+        <input type="radio" id="comp" name="who" value="my computer" required>
+        <label for="comp">My computer told me</label><br>
+        <br>
+
+        What's wrong? <br>
+
+        <input type="radio" id="connect" name="what" value="connect" required>
+        <label for="connect">I can't connect!</label><br>
+
+        <input type="radio" id="wack" name="what" value="wack" required>
+        <label for="wack">It's printing weird</label><br>
+
+        <input type="radio" id="err" name="what" value="err" required>
+        <label for="err">It has an error message</label><br>
+
+        <input type="radio" id="out" name="what" value="out" required>
+        <label for="out">It's out of something</label><br>
+
+        <input type="radio" id="jam" name="what" value="jam" required>
+        <label for="jam">It's Jammed</label><br>
+
+        <input type="radio" id="other" name="what" value="other" required>
+        <label for="other">Something else</label><br>
+        <br>
+
+        <label for="more">Please specify more!:</label><br>
+        <input type="text" name="more" id="moreinfo"><br><br>
+
+        Optionally,<br>
+
+        <label for="name">What's your name?:</label><br>
+
+        <input type="text" name="name" id="namepls"> <br><br>
+
+        <label for="mail">What's your email?</label><br>
+        <input type="text" name="mail" id="emailpls"><br><br>
+
+        <input type="submit">
+        <br>
+        This button does nothing. I hope it makes you feel better though. 
+        <button>Save</button>
+    </form>
+    <p>
+        Are you Bryan or another administrator? Are you confused about who made this? 
+        Send an email to <a href="mailto:me@jessie.id"> me@jessie.id</a>
+    </p>
+
+
+    <a href="/prior.html">See previous reports</a>
+</body>
