@@ -1,4 +1,5 @@
 console.log("Hello via Bun!");
+import { HelixDB } from "helix-db";
 
 var idno = 0;
 
@@ -42,9 +43,10 @@ class Problem {
     }
 }
 
-var issues: Array<Problem> = [];
 import express from "express";
 import dotenv from "dotenv";
+
+const db = new HelixDB();
 
 dotenv.config({ path: __dirname+'/.env' });
 
@@ -70,11 +72,11 @@ app.get('/index.html', (req, res) => {
 });
 
 app.get("/issues", (req, res) => {
-    res.send(JSON.stringify(issues));
+    res.send(JSON.stringify(db.getAll()));
 });
 
 app.get("/resolve/id:/name:", (req, res) => {
-    res.send(JSON.stringify(issues));
+    res.send(JSON.stringify(db.getAll));
 });
 
 app.post("/printer", (req, res) => {
@@ -84,8 +86,8 @@ app.post("/printer", (req, res) => {
     console.log(req.body);
     let report = (req.body);
     let err= new Problem(report)
-    issues.unshift(err);
-    console.log(issues);
+    db.create(err);
+    console.log(db.getAll);
     res.send("Thank you! See <a href=prior.html>prior responses</a> or <a href=/>Submit another issue</a>");
     
 });
