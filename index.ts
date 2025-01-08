@@ -48,7 +48,7 @@ import dotenv from "dotenv";
 
 const db = new HelixDB();
 
-dotenv.config({ path: __dirname+'/.env' });
+dotenv.config({ path: '/.env' });
 
 const app = express();
 app.use(express.urlencoded({ extended: true }))
