@@ -1,7 +1,6 @@
 console.log("Hello via Bun!");
 import { HelixDB } from "helix-db";
 
-var idno = 0;
 
 
 type formobject={
@@ -24,7 +23,6 @@ class Problem {
     resolvedby?:string
     submittedStamp:number;
     resolvedStamp?:number;
-    id :number;
     complaints?: string;
     constructor(data:formobject){
         this.which = data.which
@@ -34,12 +32,9 @@ class Problem {
         this.mail = data.mail
         this.name = data.name
         this.complaints = data.complaints
-
-
         this.resolved = false;
         this.submittedStamp = Date.now()
-        idno ++;
-        this.id = idno;
+    
     }
 }
 
@@ -86,8 +81,9 @@ app.post("/printer", (req, res) => {
     console.log(req.body);
     let report = (req.body);
     let err= new Problem(report)
-    db.create(err);
-    console.log(db.getAll);
+    let uuid = db.create(err);
+
+    console.log(db.getAll());
     res.send("Thank you! See <a href=prior.html>prior responses</a> or <a href=/>Submit another issue</a>");
     
 });
@@ -95,3 +91,5 @@ app.post("/printer", (req, res) => {
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+// fuck around and figure out what the db im using is below
