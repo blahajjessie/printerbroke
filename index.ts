@@ -81,10 +81,17 @@ app.post("/printer", (req, res) => {
     console.log(req.body);
     let report = (req.body);
     let err= new Problem(report)
-    let uuid = db.create(err);
 
     console.log(db.getAll());
-    res.send("Thank you! See <a href=prior.html>prior responses</a> or <a href=/>Submit another issue</a>");
+    if (err.which != "none"){
+        db.create(err);
+        res.send("Thank you! See <a href=prior.html>prior responses</a> or <a href=/>Submit another issue</a>");
+
+    }
+    else{
+        res.send("You're totally not a robot! I totally accepted this! See <a href=prior.html>prior responses</a> or  <a href=/>Submit another issue</a> ");
+
+    }
     
 });
 
